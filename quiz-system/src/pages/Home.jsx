@@ -1,6 +1,5 @@
-import { useLocation } from "wouter";
+import { useLocation ,  Link} from "wouter";
 import { useCourses } from "../hooks/useCourses";
-
 export default function Home() {
   const [, setLocation] = useLocation();
   const [courses] = useCourses();
@@ -171,15 +170,17 @@ export default function Home() {
       <footer className="bg-white border-t border-gray-100 py-6 px-4 text-center">
         <p className="text-gray-400 text-sm">
           Established by SCIT Department of MUST  &copy; {new Date().getFullYear()} &nbsp;| Develop by |<a href="https://marketingboostersoftwarehouse.com/">Marketing Booster Software House Pvt.Ltd</a> |&nbsp;{" "}
-          <a
-            href="/admin-login"
-            data-testid="link-admin-panel"
-            className="text-indigo-500 hover:text-indigo-700 font-medium hover:underline transition-colors"
-          >
-            Admin Panel
-          </a>
+           <Link
+      href="/admin-login"
+      className="text-indigo-500 hover:text-indigo-700 font-medium hover:underline transition-colors"
+    >
+      Admin Panel
+    </Link>
         </p>
       </footer>
     </div>
   );
 }
+
+
+
